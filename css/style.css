@@ -4,3 +4,23 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
+/* HEADER PAGINA*/
+header {
+    height: 120px;
+    background-image: url(../img/wall.png);
+    background-position: center;
+    background-size: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header h1 {
+    font-size: 60px;
+    font-family: "Edu TAS Beginner", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
