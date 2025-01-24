@@ -45,6 +45,14 @@ main {
 }
 
 /* card */
+.card {
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: rotate(10deg) ;
+}
+
+
 .card-img-top {
     padding: 10px;
 }
@@ -70,6 +78,10 @@ h5 {
     position: absolute;
     top: -5%;
     left: 43%;
+}
+
+.card:hover .pin {
+    display: none;
 }
 
 .pin img {
