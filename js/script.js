@@ -1,5 +1,8 @@
 // SELEZIONO GLI ELEMENTI DI OUTPUT
 const cardContainer = document.querySelector('.container');
+const cardImage = document.querySelector('cardImage');
+
+
 
 // SALVO L'ENDPOINT IN UNA VARIABILE
 const endepoint = 'https://lanciweb.github.io/demo/api/pictures/';
@@ -24,9 +27,20 @@ axios.get(endepoint)
                     <h5 class="card-title">${card.title.toUpperCase()}</h5>  
                 </div>
             </div>
-            
             `;
-        })
+        });
+            
+            // creo un addeventlistener per aprire le corrispondenti immagini al click
+            document.querySelectorAll('.card').forEach((card, index) => {
+                card.addEventListener('click', () => {
+                    window.location.href = album[index].url;
+
+                });
+                
+            });
+
+            
+        
 
         
     })
