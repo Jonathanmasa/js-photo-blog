@@ -18,9 +18,10 @@ axios.get(endepoint)
             cardContainer.innerHTML +=  `
             <div class="card m-2" style="width: 12rem;">
                 <img src="${card.url}" class="card-img-top" alt="...">
+                <div class="pin"><img src="./img/pin.svg" alt="pin"></div>
                 <div class="card-body">
                     <p class="card-text">${card.date}</p>
-                    <h5 class="card-title">${card.title.toUpperCase()}</h5>   
+                    <h5 class="card-title">${card.title.toUpperCase()}</h5>  
                 </div>
             </div>
             

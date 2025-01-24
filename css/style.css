@@ -65,3 +65,13 @@ h5 {
     font-style: normal;
     color: gray;
 }
+
+.pin {
+    position: absolute;
+    top: -5%;
+    left: 43%;
+}
+
+.pin img {
+    width: 20px;
+}
