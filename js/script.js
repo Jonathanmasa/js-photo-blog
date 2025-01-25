@@ -30,17 +30,27 @@ axios.get(endepoint)
             `;
         });
             
-            // creo un addeventlistener per aprire le corrispondenti immagini al click
-            document.querySelectorAll('.card').forEach((card, index) => {
-                card.addEventListener('click', () => {
-                    window.location.href = album[index].url;
-
-                });
-                
-            });
-
-            
         
+        // Aggiungo listener per aprire il modal
+        document.querySelectorAll('.card img').forEach((img) => {
+            img.addEventListener('click', (openModal) => {
+            // Prevengo il comportamento predefinito
+            openModal.preventDefault(); 
+
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            // Imposto la sorgente dell'immagine
+            modalImage.src = img.src;
+             // Mostro il modal 
+            modal.classList.add('show');
+            });
+        });
+
+        // Aggiungo listener per chiudere il modal con il bottone "Chiudi"
+        document.querySelector('.close-button').addEventListener('click', () => {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('show'); // Nasconde il modal
+        });
 
         
     })
